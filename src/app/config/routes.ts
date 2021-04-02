@@ -1,0 +1,1 @@
+export const BASE_PATH = 'main_window' as const;
