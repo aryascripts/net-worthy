@@ -4,7 +4,7 @@ import React from "react";
 export const AddEditAccount: React.FC = () => {
   return (
     <Box>
-      <Heading size={"lg"}>Add New Account</Heading>
+      <Heading>Add New Account</Heading>
     </Box>
   );
 };

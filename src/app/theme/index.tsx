@@ -4,4 +4,11 @@ export const networthyTheme = extendTheme({
     heading: "Open Sans",
     body: "Raleway",
   },
+  components: {
+    Button: {
+      defaultProps: {
+        colorScheme: "purple",
+      },
+    },
+  },
 });

@@ -13,11 +13,10 @@ export const Header = () => {
   const buttonProps = {
     size: "md",
     variant: "ghost",
-    colorScheme: "purple",
   };
 
   return (
-    <Flex>
+    <Flex marginBottom={2}>
       <Image src={Logo} h={42} marginRight={2} />
       <Link to="/">
         <Button
@@ -28,7 +27,7 @@ export const Header = () => {
           Dashboard
         </Button>
       </Link>
-      <Link to="/accounts">
+      <Link to="accounts">
         <Button
           tabIndex={1}
           isActive={location.pathname.startsWith("/accounts")}
