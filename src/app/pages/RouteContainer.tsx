@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
-import { Route, Switch } from "wouter";
 import { AccountsPage } from "./accounts";
 import { DashboardPage } from "./dashboard";
+import { Switch, Route } from "react-router-dom";
 
 export const RouteContainer: React.FC = (_props) => {
   return (
