@@ -1,4 +1,5 @@
 interface CalculationItem {
+    id: string;
     accountId: string;
     amount: number;
 

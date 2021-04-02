@@ -1,2 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
-export const networthyTheme = extendTheme({});
+export const networthyTheme = extendTheme({
+  fonts: {
+    heading: "Open Sans",
+    body: "Raleway",
+  },
+});

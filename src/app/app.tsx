@@ -1,19 +1,17 @@
-import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Header } from "./templates/Header";
+import "@fontsource/open-sans/700.css";
+import "@fontsource/raleway/400.css";
+import React from "react";
+import { Router } from "wouter";
+import { Header } from "./molecules/Header";
+import { RouteContainer } from "./pages/RouteContainer";
 import { networthyTheme } from "./theme";
-import { Router, useLocation } from "wouter";
 
-export const App: React.FC = (_props) => {
-  const [location, setLocation] = useLocation();
-
-  return (
-    <ChakraProvider theme={networthyTheme}>
-      <Router base="/main_window">
-        <Header />
-
-        {location}
-      </Router>
-    </ChakraProvider>
-  );
-};
+export const App: React.FC = (_props) => (
+  <ChakraProvider theme={networthyTheme}>
+    <Router base="/main_window">
+      <Header />
+      <RouteContainer />
+    </Router>
+  </ChakraProvider>
+);
