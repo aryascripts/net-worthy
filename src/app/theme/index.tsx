@@ -10,5 +10,15 @@ export const networthyTheme = extendTheme({
         colorScheme: "purple",
       },
     },
+    FormLabel: {
+      defaultProps: {
+        marginBottom: 0,
+      },
+    },
+    Input: {
+      defaultProps: {
+        colorScheme: "purple",
+      },
+    },
   },
 });
