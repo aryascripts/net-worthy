@@ -1,24 +1,27 @@
 import {
   Box,
   Button,
-  ButtonGroup,
   Flex,
   FormControl,
   FormLabel,
   Heading,
-  HStack,
   Input,
   Select,
-  VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { FormEvent, FormEventHandler } from "react";
 
 export const AddEditAccount: React.FC = () => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    console.log(event);
+  };
+
   return (
     <Box maxWidth={600} margin="auto">
       <Heading marginBottom={3}>Add New Account</Heading>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <FormControl id="accountName" isRequired>
           <FormLabel margin={"0.5rem 0 0 0"}>Account Name</FormLabel>
           <Input colorScheme="purple" placeholder="US Dollar" />
@@ -52,8 +55,12 @@ export const AddEditAccount: React.FC = () => {
         </FormControl>
 
         <Flex direction={"row-reverse"} marginTop={2}>
-          <Button marginLeft={2}>Save & Close</Button>
-          <Button variant={"outline"}>Save & Add Another</Button>
+          <Button type="submit" marginLeft={2}>
+            Save & Close
+          </Button>
+          <Button type="submit" variant={"outline"}>
+            Save & Add Another
+          </Button>
         </Flex>
       </form>
     </Box>

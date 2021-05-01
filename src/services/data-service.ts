@@ -1,9 +1,24 @@
-const Database =  require('better-sqlite3');
+import { createRxDatabase, RxDatabase } from "rxdb";
 
-const _DataStore = () => {
-    const db = new Database('./finances', {verbose: console.log });
-        
-}
+let db: RxDatabase;
 
+type CreateDatabase = (data: {
+  name: string;
+  password: string;
+}) => Promise<RxDatabase>;
 
-export const DataStore = _DataStore();
+const createDb: CreateDatabase = async ({ name, password }) => {
+  db = await createRxDatabase({
+    name: "net-worthy", // <- name
+    adapter: "idb", // <- storage-adapter
+    password: "myPassword", // <- password (optional)
+    multiInstance: true, // <- multiInstance (optional, default: true)
+    eventReduce: false, // <- eventReduce (optional, default: true)
+  });
+  return db;
+};
+
+export const Database = {
+  create: createDb,
+  get: db,
+};
