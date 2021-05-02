@@ -1,10 +1,13 @@
-interface Account implements Base {
-    id: string;
-    name: string;
-    link: string;
-    linkText: string;
-    currency: string;
-    country: string;
+interface FinanceAccount {
+  id: string;
+  name: string;
+  link: string;
+  linkText: string;
+  currency: string;
+  country: string;
 
-    archived: boolean;
+  archived: boolean;
+
+  createdAt: number;
+  updatedAt: number;
 }

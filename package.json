@@ -55,7 +55,10 @@
                 {
                   "html": "./src/index.html",
                   "js": "./src/renderer.ts",
-                  "name": "main_window"
+                  "name": "main_window",
+                  "preload": {
+                    "js": "./src/preload.ts"
+                  }
                 }
               ]
             }
@@ -103,9 +106,11 @@
     "@emotion/styled": "^11.1.5",
     "@fontsource/open-sans": "^4.2.2",
     "@fontsource/raleway": "^4.2.2",
+    "@types/lowdb": "^1.0.9",
     "better-sqlite3": "^7.1.4",
     "electron-squirrel-startup": "^1.0.0",
     "framer-motion": "^4.1.2",
+    "lowdb": "^1.0.0",
     "nedb": "^1.8.0",
     "prettier": "^2.2.1",
     "react": "^17.0.2",
