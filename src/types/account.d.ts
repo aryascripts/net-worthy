@@ -1,12 +1,13 @@
-interface Account {
-    id: string;
-    name: string;
-    link: string;
-    linkText: string;
-    currency: string;
+interface FinanceAccount {
+  id: string;
+  name: string;
+  link: string;
+  linkText: string;
+  currency: string;
+  country: string;
 
-    archived: boolean;
+  archived: boolean;
 
-    createdAt: number;
-    updatedAt: number;    
+  createdAt: number;
+  updatedAt: number;
 }
