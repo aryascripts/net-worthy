@@ -1,10 +1,9 @@
 import { Button } from "@chakra-ui/button";
 import { SettingsIcon } from "@chakra-ui/icons";
 import { Flex, Spacer } from "@chakra-ui/layout";
-import { Box, Image, space } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BASE_PATH } from "../config/routes";
 //@ts-ignore
 import Logo from "./../assets/logo.png";
 
@@ -46,7 +45,6 @@ export const Header = () => {
         w={6}
         h={6}
       />
-      {}
     </Flex>
   );
 };
